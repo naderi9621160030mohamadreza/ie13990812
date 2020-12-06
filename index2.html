@@ -12,7 +12,7 @@
 </head>
 <body>
 <div class="container">
-    <div class="header" id="main-header">
+    <div class="header" id="header">
         <ul>
             <li><a href="/index.html">خانه</a> </li>
             <li><a href="index3.html">آموزش ها</a> </li>
@@ -75,30 +75,15 @@
     </div>
 </div>
     <script>
-        /*console.dir(document);
-        console.log(document.domain);
-        console.log(document.URL);
-        console.log(document.title);
-        document.title =  123;
-        console.log(document.doctype);
-        console.log(document.head);
-        console.log(document.body);
-        console.log(document.all);
-        console.log(document.all[10]);
-        document.all[3].textContent = 'Hello';
-        console.log(document.forms[0]);
-        console.log(document.links);
-        console.log(document.images);*/
-        /*------------------ -----------------*/
         console.log(document.getElementById('title-post'));
         var headerTitle = document.getElementById('title-post');
-        var header = document.getElementById('main-header');
+        var header = document.getElementById('header');
         console.log(headerTitle);
         headerTitle.textContent = 'Hello';
         headerTitle.innerText = 'Goodbye';
         console.log(headerTitle.innerText);
         headerTitle.innerHTML = '<h5>Hello</h5>';
-        header.style.borderBottom = 'solid 3px #000';
+        header.style.borderBottom = 'solid 3px red';
     </script>
    
 </body>
