@@ -61,11 +61,11 @@
         </div>
         <div class="item-footer category">
             <h4 class="title">دسته بندی ها</h4>
-            <ul>
-                <li>آموزش html</li>
-                <li>آموزش css</li>
-                <li>آموزش js</li>
-                <li>آموزش php</li>
+            <ul class="list-group">
+                <li class="list-group-item">آموزش html</li>
+                <li class="list-group-item">آموزش css</li>
+                <li class="list-group-item">آموزش js</li>
+                <li class="list-group-item">آموزش php</li>
             </ul>
         </div>
         <div class="item-footer nemad">
@@ -75,15 +75,19 @@
     </div>
 </div>
     <script>
-        console.log(document.getElementById('title-post'));
-        var headerTitle = document.getElementById('title-post');
-        var header = document.getElementById('header');
-        console.log(headerTitle);
-        headerTitle.textContent = 'Hello';
-        headerTitle.innerText = 'Goodbye';
-        console.log(headerTitle.innerText);
-        headerTitle.innerHTML = '<h5>Hello</h5>';
-        header.style.borderBottom = 'solid 3px red';
+        var items = document.getElementsByClassName('list-group-item');
+        console.log(items);
+        console.log(items[1]);
+        items[1].textContent = 'Hello 2';
+        items[1].style.fontWeight = 'bold';
+        items[1].style.backgroundColor = 'yellow';
+
+        // Gives error
+        //items.style.backgroundColor = '#f4f4f4';
+
+        for(var i = 0; i < items.length; i++){
+          items[i].style.backgroundColor = '#f4f4f4';
+        }
     </script>
    
 </body>
